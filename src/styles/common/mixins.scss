@@ -1,0 +1,18 @@
+@mixin truncate($row){
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $row;
+	-webkit-box-orient: vertical;
+}
+
+@mixin fade-bg-gradient($direction: 0deg) {
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		pointer-events: none;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 70%, #000 105.68%);
+	}
+}

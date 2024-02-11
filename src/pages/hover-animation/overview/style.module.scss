@@ -1,0 +1,100 @@
+.container {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  .boxes {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 500ms;
+
+    .box {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20vw;
+      height: 20vw;
+      min-width: 300px;
+      min-height: 300px;
+
+      transition: all 500ms ease-in-out;
+
+      &.green {
+        rotate: 0deg;
+        translate: -80% -45%;
+        scale: 1;
+        transform-origin: top right;
+
+        .shadow-image {
+          filter: blur(12px);
+          translate: 10% -80%;
+          scale: 0.8;
+        }
+      }
+
+      &.purple {
+        translate: -55% -40%;
+        rotate: 0deg;
+        scale: 1;
+
+        .shadow-image {
+          filter: blur(17px);
+          translate: 7% -74%;
+          scale: 0.8;
+        }
+      }
+
+      &.pink {
+        translate: -32% -33%;
+        rotate: 0deg;
+        scale: 1.1;
+
+        .shadow-image {
+          transform: scale(0.9);
+          translate: 10% -67%;
+          filter: blur(62px);
+        }
+      }
+
+      img {
+        position: relative;
+        width: 100%;
+        z-index: 2;
+
+        &.shadow-image {
+          z-index: 1;
+          transition: all 500ms;
+        }
+      }
+    }
+
+    &:hover {
+      .box {
+        scale: 1.1;
+
+        &.green {
+          rotate: 35deg;
+          translate: -83% -20%;
+        }
+
+        &.purple {
+          translate: -65% -35%;
+        }
+
+        &.pink {
+          rotate: 35deg;
+          translate: -31% -35%;
+          scale: 1.2;
+        }
+
+        .shadow-image {
+          filter: blur(50px);
+        }
+      }
+    }
+  }
+}
