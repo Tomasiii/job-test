@@ -20,7 +20,7 @@ const HoverSlider = () => {
 
 	return (
 		<Swiper
-			slidesPerView={'auto'}
+			slidesPerView="auto"
 			centeredSlides={true}
 			pagination={{
 				clickable: true,
@@ -33,7 +33,7 @@ const HoverSlider = () => {
 		>
 			{SLIDES.map((item, i) => {
 				return (
-					<SwiperSlide className={cn({ activeSlide: i === activeSlideIndex })}>
+					<SwiperSlide className={cn({ activeSlide: i === activeSlideIndex })} key={i}>
 						<img src={item.img} alt="beauty box" />
 					</SwiperSlide>
 				)

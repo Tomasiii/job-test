@@ -1,0 +1,8 @@
+.header {
+  padding: 0 24px;
+  height: var(--admin-header-height);
+  display: flex;
+  justify-content: space-between;
+  border-bottom: var(--default-border);
+  width: 100%;
+}

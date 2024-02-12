@@ -2,72 +2,59 @@
   height: 100vh;
   position: relative;
   overflow: hidden;
+  transition: all .5s;
 
   .boxes {
-    top: 50%;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
     position: absolute;
     cursor: pointer;
     z-index: 1;
-    transition: all 500ms;
+    transition: all .5s;
 
     .box {
       position: absolute;
       left: 0;
       top: 0;
-      width: 20vw;
-      height: 20vw;
-      min-width: 300px;
-      min-height: 300px;
-
-      transition: all 500ms ease-in-out;
+      width: 300px;
+      height: 250px;
+      transition: all .5s ease-in-out;
 
       &.green {
-        rotate: 0deg;
-        translate: -80% -45%;
-        scale: 1;
+        translate: -100% -40%;
         transform-origin: top right;
 
-        .shadow-image {
-          filter: blur(12px);
-          translate: 10% -80%;
-          scale: 0.8;
+        .shadow {
+          translate: 0% -80%;
         }
       }
 
       &.purple {
-        translate: -55% -40%;
-        rotate: 0deg;
-        scale: 1;
+        translate: -55% -35%;
 
-        .shadow-image {
-          filter: blur(17px);
-          translate: 7% -74%;
-          scale: 0.8;
+        .shadow {
+          translate: 7% -60%;
+          filter: blur(18px);
         }
       }
 
       &.pink {
-        translate: -32% -33%;
-        rotate: 0deg;
-        scale: 1.1;
+        translate: -15% -25%;
 
-        .shadow-image {
-          transform: scale(0.9);
-          translate: 10% -67%;
-          filter: blur(62px);
+        .shadow {
+          scale: 1.2;
+          translate: 15% -50%;
         }
       }
 
       img {
         position: relative;
-        width: 100%;
         z-index: 2;
+        max-width: 100%;
 
-        &.shadow-image {
+        &.shadow {
           z-index: 1;
-          transition: all 500ms;
+          transition: all .5s;
         }
       }
     }
@@ -78,23 +65,58 @@
 
         &.green {
           rotate: 35deg;
-          translate: -83% -20%;
+          translate: -83% -10%;
         }
 
         &.purple {
-          translate: -65% -35%;
+          translate: -65% -20%;
         }
 
         &.pink {
           rotate: 35deg;
-          translate: -31% -35%;
-          scale: 1.2;
+          translate: 0 -15%;
+
+          .shadow {
+            filter: blur(30px);
+          }
         }
 
-        .shadow-image {
-          filter: blur(50px);
+        .shadow {
+          filter: blur(18px);
         }
       }
+    }
+  }
+
+  .btn {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    transition: all .5s;
+
+    button {
+      width: 176px;
+      height: 45px;
+      background-color: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &.fadeOutAnimation {
+    background: #EBFFFC;
+
+    .boxes {
+      top: 0;
+      opacity: 0;
+    }
+
+    .btn {
+      bottom: -80px;
+      opacity: 0;
     }
   }
 }

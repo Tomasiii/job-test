@@ -10,14 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-spring/web": "^9.7.3",
     "classnames": "^2.3.2",
+    "effector": "^22.8.6",
+    "effector-react": "^22.5.3",
     "eve": "^0.5.4",
+    "framer-motion": "^11.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.0",
+    "react-use-measure": "^2.1.1",
     "sass": "^1.70.0",
     "snapsvg": "^0.5.1",
-    "snapsvg-cjs-ts": "^0.0.6",
     "swiper": "^11.0.6",
     "vite-plugin-svgr": "^4.2.0"
   },

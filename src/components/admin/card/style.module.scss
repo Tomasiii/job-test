@@ -1,0 +1,94 @@
+@import "@styles/common/mixins";
+
+.wrapper {
+  padding: 40px 24px;
+  border-radius: 2px;
+  border: var(--default-border);
+  // width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  &__title {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    color: var(--color-light-main-primary-dark-10);
+    @include text-md(500);
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+
+  svg {
+    cursor: pointer;
+  }
+}
+
+.iconsWrapper {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.articleItem {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  background-color: #f7f7f7;
+  justify-content: space-between;
+  margin-bottom: 56px;
+}
+
+.article {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding-left: 4px;
+  color: var(--color-light-main-primary-dark-7);
+  @include text-md();
+}
+
+.articleActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 45px;
+}
+
+.addCollection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  > p {
+    @include text-sm();
+    color: var(--color-light-main-primary-dark-7);
+    margin: 0;
+  }
+}
+
+.addCollectionButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  color: var(--color-light-main-primary-dark-10);
+  @include text-md();
+
+  &:after {
+    $button-and-icon-width: 175px;
+    content: "";
+    height: 1px;
+    width: calc(100% - $button-and-icon-width);
+    background-color: #f0f0f0;
+    position: absolute;
+    right: -15px;
+  }
+}

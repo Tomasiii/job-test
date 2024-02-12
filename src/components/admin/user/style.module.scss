@@ -1,0 +1,30 @@
+@import "@styles/common/mixins";
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.name {
+  color: var(--color-blue);
+  @include text-sm(500);
+}
+
+.email {
+  color: var(--color-grey);
+  @include text-tn();
+}
+
+.img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
