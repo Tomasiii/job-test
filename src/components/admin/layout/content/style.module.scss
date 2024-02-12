@@ -23,13 +23,7 @@
   display: grid;
   gap: 20px;
 
-  &[data-sidebar-open='true'] {
-    grid-template-columns: repeat(2, 428px);
-  }
-
-  &[data-sidebar-open='false'] {
-    grid-template-columns: repeat(3, 428px);
-  }
+  grid-template-columns: repeat(auto-fill, 428px);
 }
 
 .titleContainer {
